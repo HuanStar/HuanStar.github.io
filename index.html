@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon2.ico">
+    <title>幻星 | 个人主页</title>
+    <meta name="description" content="期待与更多的人相遇！">
+    <meta name="keywords" content="个人网站 博客  技术宅 星空 Star starsky 幻 huan huanstar 幻星 huanyukong 幻与空">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/icon.css">
+    <style>
+        .avatar1 img {
+            float: left;
+            margin-right: 15px;
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 6px
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+            -webkit-border-radius: 2em;
+            -moz-border-radius: 2em;
+            border-radius: 2em
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #30B07F;
+            background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .4) 100%, transparent 100%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
+            -webkit-border-radius: 2em;
+            -moz-border-radius: 2em;
+            border-radius: 2em
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+        .toast-bottom-center {
+            position: absolute;
+            left: 30px;
+            right: 10px;
+            top: 20px;
+        }
+    </style>
+
+    <div class="background">
+        <canvas id="startrack"></canvas>
+        <div class="cover"></div>
+    </div>
+    <div class="main">
+        <div class="ch intro">
+            <div class="container">
+                <div class="hello">
+                    <h1 id="hitokoto_text">思考中...</h1>
+                    <h2>
+                        <div class="circle"> <span></span> <span></span>
+                            <span></span>
+                        </div>幻星 | 个人主页
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="ch about">
+            <div class="container">
+                <h2 class="chtitle">Who is <span>HuanStar</span>？</h2>
+                <div class="clear">
+                    <div class="introduct">
+                        <img class="avatar" src="images/logo.png">
+                        <p>人生很迷茫，你需要算法；人生很短暂，你需要编程！</p>
+                        <p style="padding-bottom:1em;">Programming Can Bring Endless Magic!</p>
+                        <p>你好，这里是幻星 <sup>HuanStar</sup>无尽的幻彩星空让我们在这里相遇，也许你会很迷茫，但星光的灿烂将会照亮我们。</p>
+                        <p>希望能与你在幻彩星空的绚丽之下相见！</p>
+                        <div class="chatbox">
+                            <div class="line loading"> <span></span>
+                                <span></span> <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="skill clear">
+                        <li>
+                            <p>C/C++</p>
+                            <div class="progress">
+                                <div style="width:78%;"></div>
+                                <span>刷爆题库的能力</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Python</p>
+                            <div class="progress">
+                                <div style="width:55%;"></div>
+                                <span>赞美最好的语言程度的能力</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>HTML5/CSS3</p>
+                            <div class="progress">
+                                <div style="width:30%;"></div>
+                                <span>制作网站程度的能力</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Javascript</p>
+                            <div class="progress">
+                                <div style="width:25%;">
+                                </div><span>让自己可以装逼的能力</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>设计</p>
+                            <div class="progress">
+                                <div style="width:20%;"></div>
+                                <span>改变世界的能力</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>干饭</p>
+                            <div class="progress">
+                                <div style="width:82%;"></div>
+                                <span>让自己满足的能力</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>魔法</p>
+                            <div class="progress">
+                                <div style="width:12%;"></div>
+                                <span>和普通人相同程度的能力</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>睡觉</p>
+                            <div class="progress">
+                                <div style="width:99%;"></div>
+                                <span>成为植物人的能力......</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="find ch">
+            <div class="container links">
+                <h2 class="chtitle">幻星生活的<span>地方</span></h2>
+                <div class="clear col-3">
+                    <a href="http://blog.huanyukong.epizy.com" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#28a9e0"></div>
+                            <div class="inner"> <span>博客</span> </div>
+                        </div>
+                    </a>
+                    <a>
+                        <div class="item">
+                            <div class="bg" style="background-color:#28a9e0"></div>
+                            <div class="inner"> <span>幻星</span> </div>
+                        </div>
+                    </a>
+                    <a href="http://huanyukong.epizy.com" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#28a9e0"></div>
+                            <div class="inner"> <span>小站</span> </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="clear">
+                    <a href="https://wpa.qq.com/msgrd?v=3&uin=3036800496&site=qq&menu=yes" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#28a9e0"></div>
+                            <div class="inner"> <i class="icon-qq"></i>
+                                <span>QQ</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="huanyukong2333@outlook.com" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#28a9e0"></div>
+                            <div class="inner"> <i class="icon-mail"></i> <span>Mail</span> </div>
+                        </div>
+                    </a>
+                    <a href="https://weibo.com/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#e6162d"></div>
+                            <div class="inner"> <i class="icon-weibo"></i> <span>Weibo</span> </div>
+                        </div>
+                    </a>
+                    <a href="https://www.bilibili.com" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#f9a2a8"></div>
+                            <div class="inner"> <i class="icon-bilibili"></i>
+                                <span>Bilibili</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#28a9e0"></div>
+                            <div class="inner"> <i class="icon-twitter"></i> <span>Twitter</span> </div>
+                        </div>
+                    </a>
+                    <a href="https://www.zhihu.com/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#0f88eb"></div>
+                            <div class="inner"> <i class="icon-zhihu"></i>
+                                <span>知乎</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#f09199"></div>
+                            <div class="inner"> <i class="icon-bookmark"></i> <span>Bangumi</span> </div>
+                        </div>
+                    </a> <a href="http://music.163.com" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#f12d35"></div>
+                            <div class="inner"> <i class="icon-netease_music"></i>
+                                <span>网易云音乐</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://github.com" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#353535"></div>
+                            <div class="inner"> <i class="icon-github"></i> <span>Github</span> </div>
+                        </div>
+                    </a>
+                    <a href="https://www.baidu.com/" target="_blank">
+                        <div class="item">
+                            <div class="bg" style="background-color:#b600ff"></div>
+                            <div class="inner"> <i class="icon-instagram"></i> <span>Instgram</span> </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="gate ch">
+            <div class="container links">
+                <h2 class="chtitle">常用<span>IDE</span>合集</h2>
+                <div class="clear"> <a href="https://code.visualstudio.com/" target="_blank">
+                        <div class="item">
+                            <div class="avatar1"> <img src="images/vscode.jpg"> </div>
+                            <div class="inner">
+                                <h5>VS Code</h5>
+                                <p>用来写网页的好东西</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://visualstudio.microsoft.com/zh-hans/" target="_blank">
+                        <div class="item">
+                            <div class="avatar1"> <img src="images/vs.png"> </div>
+                            <div class="inner">
+                                <h5>Visual Studio</h5>
+                                <p>写WPF不用它，用什么？</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.sublimetext.com/" target="_blank">
+                        <div class="item">
+                            <div class="avatar1"> <img src="images/sub.jpeg"> </div>
+                            <div class="inner">
+                                <h5>Sublime Text 3</h5>
+                                <p>用它写C++可香了</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.jetbrains.com/zh-cn/pycharm/" target="_blank">
+                        <div class="item">
+                            <div class="avatar1"> <img src="images/pyc.jpeg"> </div>
+                            <div class="inner">
+                                <h5>PyCharm</h5>
+                                <p>顾名思义,用它写Python啦</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer ch">
+        <div class="container">
+            <h3>幻星</h3>
+            <p>幻彩星空的尽头，全新世界的起点</p>
+            <p class="c"><a href="">Say hello to me @ HuanStar</a></p>
+            <br>
+            <p id="span"></p>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/stats.js" charset="UTF-8">
+    </script>
+    <span id="showDays"></span>
+
+    <script type="text/javascript">
+        function runtime() {
+            // 初始时间，日/月/年 时:分:秒
+            X = new Date("11/6/2021 13:40:00");
+            Y = new Date();
+            T = (Y.getTime() - X.getTime());
+            M = 24 * 60 * 60 * 1000;
+            a = T / M;
+            A = Math.floor(a);
+            b = (a - A) * 24;
+            B = Math.floor(b);
+            c = (b - B) * 60;
+            C = Math.floor((b - B) * 60);
+            D = Math.floor((c - C) * 60);
+            //信息写入到DIV中
+            document.getElementById('span').innerHTML = "本站已完美运行: " + A + "天" + B + "小时" + C + "分" + D + "秒"
+        }
+        setInterval(runtime, 1000);
+    </script>
+
+    <script>
+        fetch('https://v1.hitokoto.cn')
+            .then(response => response.json())
+            .then(data => {
+                const hitokoto = document.getElementById('hitokoto_text')
+                hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+                hitokoto.innerText = data.hitokoto
+            })
+            .catch(console.error)
+    </script>
+</body>
+
+</html>
